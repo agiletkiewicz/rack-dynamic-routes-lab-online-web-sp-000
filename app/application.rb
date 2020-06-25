@@ -8,6 +8,10 @@ class Application
       
       item_name = req.path.split("/items/").last
       
+      if item = Item.all.find{|i| i.item == item_name}
+         resp.write "#{"
+       else 
+       end
       
     else 
       resp.write "Path Not Found"
