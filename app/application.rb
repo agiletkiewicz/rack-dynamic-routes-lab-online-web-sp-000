@@ -7,10 +7,14 @@ class Application
     if req.path.match(/items/)
       
       item_name = req.path.split("/items/").last
+      item = Item.all.find{|i| i.name == item_name}
       
-      if item = Item.all.find{|i| i.item == item_name}
-         resp.write "#{"
+      
+      if item 
+         resp.write "#{item.price}"
        else 
+         resp.write "Item Not Found"
+         resp.status = 400
        end
       
     else 
