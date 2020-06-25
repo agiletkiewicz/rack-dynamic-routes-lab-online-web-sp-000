@@ -8,6 +8,7 @@ class Application
       
       item_name = req.path.split("/items/").last
       
+      
     else 
       resp.write "Path Not Found"
       resp.status = 404
