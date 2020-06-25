@@ -6,7 +6,7 @@ class Application
 
     if req.path.match(/items/)
       
-      
+      item_name = 
       
     else 
       resp.write "Path Not Found"
